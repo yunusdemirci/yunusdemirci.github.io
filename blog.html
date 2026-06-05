@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Blog &middot; Yunus Emre Demirci</title>
+<meta name="description" content="Notes and short essays on stochastic control, filtering, and adjacent topics." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="site">
+  <div class="nav">
+    <div class="brand"><a href="index.html">Yunus Emre Demirci</a></div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#publications">Publications</a></li>
+      <li><a href="recommended-papers.html">Papers</a></li>
+      <li><a href="teaching.html">Teaching</a></li>
+      <li><a class="current" href="blog.html">Blog</a></li>
+      <li><a href="cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-head">
+    <p class="eyebrow">Writing</p>
+    <h1>Blog</h1>
+    <p>
+      Short notes, research diary entries, and informal expositions of ideas
+      I&rsquo;m thinking about. Entries below are placeholder examples &mdash; replace
+      with your own posts.
+    </p>
+  </section>
+
+  <div class="notice">
+    <strong>Note:</strong> Post titles below link to <code>#</code>. When you
+    write a post, create a new file like <code>blog/2026-05-foo.html</code>
+    and point the title to it.
+  </div>
+
+  <section>
+    <ul class="posts">
+
+      <li>
+        <p class="meta">May 12, 2026 &middot; 6 min read</p>
+        <h3><a href="#">Why filter stability is the right notion to chase</a></h3>
+        <p>
+          A short argument for why &ldquo;stability of the conditional law&rdquo; is
+          the natural object of study when partial observations meet
+          long-horizon control problems.
+        </p>
+      </li>
+
+      <li>
+        <p class="meta">Mar 2, 2026 &middot; 4 min read</p>
+        <h3><a href="#">Dobrushin&rsquo;s coefficient in one page</a></h3>
+        <p>
+          A self-contained derivation of the contraction inequality that
+          underlies many filter-stability proofs, with a worked example on a
+          two-state hidden Markov model.
+        </p>
+      </li>
+
+      <li>
+        <p class="meta">Jan 14, 2026 &middot; 8 min read</p>
+        <h3><a href="#">Notes from CDC 2025</a></h3>
+        <p>
+          Talks I enjoyed, open problems that came up in the hallway, and a
+          short list of papers I plan to read after the conference.
+        </p>
+      </li>
+
+      <li>
+        <p class="meta">Oct 30, 2025 &middot; 5 min read</p>
+        <h3><a href="#">Finite-window policies, revisited</a></h3>
+        <p>
+          Following up on a recent preprint: how tight can the near-optimality
+          bounds be made, and what does the constant really depend on?
+        </p>
+      </li>
+
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <span>&copy; <span id="yr"></span> Yunus Emre Demirci</span>
+  <span><a href="index.html">&larr; Back to home</a></span>
+</footer>
+
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>

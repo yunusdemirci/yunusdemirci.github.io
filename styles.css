@@ -1,0 +1,328 @@
+/* ============================================================
+   Yunus Emre Demirci — shared site styles
+   ============================================================ */
+
+:root{
+  --bg:#fbfaf7;
+  --surface:#ffffff;
+  --ink:#1a1a1a;
+  --ink-soft:#404040;
+  --muted:#6b6b6b;
+  --rule:#e5e1d8;
+  --accent:#7a1a1a;       /* deep crimson, academic */
+  --accent-soft:#f3ece9;
+  --max:880px;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:"EB Garamond","Times New Roman",Georgia,serif;
+  font-size:19px;
+  line-height:1.65;
+  color:var(--ink);
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .15s ease}
+a:hover{border-bottom-color:var(--accent)}
+
+/* ---------- Top bar ---------- */
+header.site{
+  position:sticky;top:0;z-index:50;
+  background:rgba(251,250,247,.92);
+  backdrop-filter:saturate(140%) blur(8px);
+  border-bottom:1px solid var(--rule);
+}
+.nav{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:14px 24px;
+  display:flex;align-items:baseline;justify-content:space-between;gap:24px;
+}
+.brand{
+  font-weight:600;
+  font-size:18px;
+  letter-spacing:.01em;
+}
+.brand a{color:var(--ink);border-bottom:none}
+.brand a:hover{color:var(--accent)}
+.nav ul{
+  list-style:none;margin:0;padding:0;
+  display:flex;gap:22px;flex-wrap:wrap;
+  font-family:"Inter",system-ui,sans-serif;
+  font-size:14px;
+}
+.nav ul a{
+  color:var(--ink-soft);
+  border-bottom:none;
+}
+.nav ul a:hover{color:var(--accent)}
+.nav ul a.current{
+  color:var(--accent);
+  border-bottom:1px solid var(--accent);
+  padding-bottom:2px;
+}
+
+/* ---------- Layout ---------- */
+main{max-width:var(--max);margin:0 auto;padding:64px 24px 96px}
+
+/* ---------- Page header (used on subpages) ---------- */
+.page-head{
+  margin-bottom:48px;border-bottom:1px solid var(--rule);padding-bottom:32px;
+}
+.page-head .eyebrow{
+  font-family:"Inter",sans-serif;
+  font-size:13px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin:0 0 10px;
+}
+.page-head h1{
+  font-family:"EB Garamond",serif;
+  font-weight:600;
+  font-size:clamp(32px,4.4vw,44px);
+  line-height:1.1;
+  letter-spacing:-.01em;
+  margin:0 0 12px;
+}
+.page-head p{
+  margin:0;
+  color:var(--ink-soft);
+  font-size:19px;
+  max-width:62ch;
+}
+
+/* ---------- Hero (homepage) ---------- */
+.hero{margin-bottom:64px;border-bottom:1px solid var(--rule);padding-bottom:48px}
+.hero h1{
+  font-family:"EB Garamond",serif;
+  font-weight:600;
+  font-size:clamp(36px,5vw,52px);
+  line-height:1.1;
+  letter-spacing:-.01em;
+  margin:0 0 8px;
+}
+.hero .role{
+  font-family:"Inter",system-ui,sans-serif;
+  font-size:14px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin:0 0 24px;
+}
+.hero p{
+  font-size:20px;
+  color:var(--ink-soft);
+  margin:14px 0;
+}
+.hero p em{color:var(--ink)}
+
+/* ---------- Section ---------- */
+section{margin-top:56px}
+section h2{
+  font-family:"Inter",system-ui,sans-serif;
+  font-size:13px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--muted);
+  font-weight:600;
+  margin:0 0 24px;
+  padding-bottom:10px;
+  border-bottom:1px solid var(--rule);
+}
+section h3{
+  font-family:"EB Garamond",serif;
+  font-size:22px;
+  font-weight:600;
+  margin:32px 0 12px;
+  color:var(--ink);
+}
+section h3:first-of-type{margin-top:0}
+
+/* Research interests */
+.interests{margin:0;padding:0;list-style:none}
+.interests li{padding:14px 0;border-bottom:1px dotted var(--rule)}
+.interests li:last-child{border-bottom:none}
+.interests strong{display:block;font-weight:600;color:var(--ink);margin-bottom:2px}
+.interests span{color:var(--ink-soft);font-size:17px}
+
+/* Publications / numbered lists */
+.pubs{margin:0;padding:0;list-style:none;counter-reset:pub}
+.pubs li{
+  position:relative;
+  padding:14px 0 14px 36px;
+  border-bottom:1px dotted var(--rule);
+  font-size:17.5px;
+  color:var(--ink-soft);
+  line-height:1.55;
+}
+.pubs li:last-child{border-bottom:none}
+.pubs li::before{
+  counter-increment:pub;
+  content:"[" counter(pub) "]";
+  position:absolute;left:0;top:14px;
+  font-family:"Inter",sans-serif;
+  font-size:13px;
+  color:var(--muted);
+  font-variant-numeric:tabular-nums;
+}
+.pubs li .title{color:var(--ink);font-style:italic}
+.pubs li .venue{color:var(--muted);font-size:16px;display:block;margin-top:2px}
+.pubs li .note{color:var(--muted);font-size:15px;display:block;margin-top:4px;font-style:italic}
+.pubs li a{word-break:break-word}
+
+.pub-group{margin-top:36px}
+.pub-group:first-of-type{margin-top:0}
+
+/* Talks / dated entries */
+.talks{margin:0;padding:0;list-style:none}
+.talks li{
+  display:grid;
+  grid-template-columns:160px 1fr;
+  gap:16px;
+  padding:14px 0;
+  border-bottom:1px dotted var(--rule);
+  align-items:baseline;
+}
+.talks li:last-child{border-bottom:none}
+.talks .when{
+  font-family:"Inter",sans-serif;
+  font-size:13px;
+  letter-spacing:.04em;
+  color:var(--muted);
+  text-transform:uppercase;
+}
+.talks .what{color:var(--ink-soft);font-size:17.5px}
+.talks .what em{color:var(--ink)}
+@media (max-width:600px){
+  .talks li{grid-template-columns:1fr;gap:2px}
+  .talks .when{font-size:12px}
+}
+
+/* Courses (teaching page) */
+.courses{margin:0;padding:0;list-style:none}
+.courses > li{
+  padding:24px 0;
+  border-bottom:1px solid var(--rule);
+}
+.courses > li:last-child{border-bottom:none}
+.courses .course-head{
+  display:flex;align-items:baseline;justify-content:space-between;gap:16px;
+  margin-bottom:6px;flex-wrap:wrap;
+}
+.courses .course-head h3{margin:0;font-size:22px}
+.courses .course-head .term{
+  font-family:"Inter",sans-serif;
+  font-size:12px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--muted);
+}
+.courses .role-line{
+  color:var(--muted);font-size:15px;margin:0 0 10px;
+  font-family:"Inter",sans-serif;
+}
+.courses .materials{
+  margin:10px 0 0;padding:0;list-style:none;
+}
+.courses .materials li{
+  padding:6px 0;font-size:17px;color:var(--ink-soft);
+  display:flex;align-items:baseline;gap:10px;
+}
+.courses .materials li::before{
+  content:"§";color:var(--muted);font-size:14px;
+}
+
+/* Blog posts */
+.posts{margin:0;padding:0;list-style:none}
+.posts li{
+  padding:24px 0;
+  border-bottom:1px solid var(--rule);
+}
+.posts li:last-child{border-bottom:none}
+.posts .meta{
+  font-family:"Inter",sans-serif;
+  font-size:12px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:6px;
+}
+.posts h3{margin:0 0 8px;font-size:24px}
+.posts h3 a{color:var(--ink);border-bottom:none}
+.posts h3 a:hover{color:var(--accent)}
+.posts p{margin:0;color:var(--ink-soft);font-size:18px;max-width:62ch}
+
+/* CV */
+.cv-grid{margin:0;padding:0;list-style:none}
+.cv-grid > li{
+  display:grid;
+  grid-template-columns:180px 1fr;
+  gap:24px;
+  padding:18px 0;
+  border-bottom:1px dotted var(--rule);
+  align-items:baseline;
+}
+.cv-grid > li:last-child{border-bottom:none}
+.cv-grid .when{
+  font-family:"Inter",sans-serif;
+  font-size:13px;letter-spacing:.06em;
+  color:var(--muted);text-transform:uppercase;
+}
+.cv-grid .what strong{display:block;color:var(--ink);font-size:19px;font-weight:600}
+.cv-grid .what .where{color:var(--muted);font-size:15px;font-family:"Inter",sans-serif;margin-top:2px;display:block}
+.cv-grid .what .desc{margin:6px 0 0;color:var(--ink-soft);font-size:17px}
+@media (max-width:600px){
+  .cv-grid > li{grid-template-columns:1fr;gap:4px}
+}
+
+/* Notes / coming-soon / placeholder card */
+.notice{
+  background:var(--accent-soft);
+  border:1px solid #ead9d3;
+  border-radius:4px;
+  padding:18px 22px;
+  margin:0 0 32px;
+  font-size:16.5px;
+  color:var(--ink-soft);
+}
+.notice strong{color:var(--ink)}
+
+/* Contact */
+.contact{
+  background:var(--accent-soft);
+  border:1px solid #ead9d3;
+  border-radius:4px;
+  padding:24px 28px;
+}
+.contact p{margin:0 0 8px;color:var(--ink-soft)}
+.contact a{font-weight:500}
+.contact .channels{
+  margin-top:14px;
+  display:flex;flex-wrap:wrap;gap:18px 26px;
+  font-family:"Inter",sans-serif;
+  font-size:15px;
+}
+.contact .channels a{
+  color:var(--accent);
+  border-bottom:1px solid #ead9d3;
+}
+
+/* Footer */
+footer{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:32px 24px 56px;
+  border-top:1px solid var(--rule);
+  font-family:"Inter",sans-serif;
+  font-size:13px;
+  color:var(--muted);
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;
+}
+
+@media (max-width:600px){
+  body{font-size:18px}
+  main{padding:40px 20px 64px}
+  .hero{margin-bottom:40px;padding-bottom:32px}
+  .nav{padding:12px 20px;flex-direction:column;align-items:flex-start;gap:8px}
+  .nav ul{gap:14px}
+}

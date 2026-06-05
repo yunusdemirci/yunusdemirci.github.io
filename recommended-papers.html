@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Recommended Papers &middot; Yunus Emre Demirci</title>
+<meta name="description" content="A curated reading list on nonlinear filtering, POMDPs, stochastic control, and reinforcement learning theory." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="site">
+  <div class="nav">
+    <div class="brand"><a href="index.html">Yunus Emre Demirci</a></div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#publications">Publications</a></li>
+      <li><a class="current" href="recommended-papers.html">Papers</a></li>
+      <li><a href="teaching.html">Teaching</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-head">
+    <p class="eyebrow">Reading List</p>
+    <h1>Recommended Papers</h1>
+    <p>
+      A curated reading list I&rsquo;ve found valuable while working on
+      nonlinear filtering, partially observed Markov decision processes,
+      and the broader theory of stochastic control. Entries below are placeholders
+      meant to be replaced with your own recommendations.
+    </p>
+  </section>
+
+  <div class="notice">
+    <strong>Note:</strong> This page is a draft. Items shown below are
+    illustrative examples of how a recommendation will appear &mdash; replace,
+    add or remove entries directly in <code>recommended-papers.html</code>.
+  </div>
+
+  <!-- ============ Foundations ============ -->
+  <section>
+    <h2>Foundations of Stochastic Control</h2>
+    <ol class="pubs">
+      <li>
+        Bertsekas, D. P., and Shreve, S. E.
+        <span class="title">Stochastic Optimal Control: The Discrete-Time Case.</span>
+        <span class="venue">Academic Press, 1978.</span>
+        <span class="note">A canonical reference for measurability subtleties in dynamic programming.</span>
+      </li>
+      <li>
+        Hern&aacute;ndez-Lerma, O., and Lasserre, J. B.
+        <span class="title">Discrete-Time Markov Control Processes.</span>
+        <span class="venue">Springer, 1996.</span>
+        <span class="note">Clean treatment of average-cost criteria and existence results.</span>
+      </li>
+      <li>
+        Y&uuml;ksel, S., and Ba&#351;ar, T.
+        <span class="title">Stochastic Networked Control Systems.</span>
+        <span class="venue">Birkh&auml;user, 2013.</span>
+        <span class="note">Information-theoretic perspective on control under communication constraints.</span>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ============ Nonlinear Filtering ============ -->
+  <section>
+    <h2>Nonlinear Filtering &amp; Ergodicity</h2>
+    <ol class="pubs">
+      <li>
+        Van Handel, R.
+        <span class="title">The stability of conditional Markov processes and Markov chains in random environments.</span>
+        <span class="venue">Annals of Probability, 37(5):1876&ndash;1925, 2009.</span>
+        <span class="note">Foundational result on filter stability under mild assumptions.</span>
+      </li>
+      <li>
+        Chigansky, P., Liptser, R., and van Handel, R.
+        <span class="title">Intrinsic methods in filter stability.</span>
+        <span class="venue">Handbook of Nonlinear Filtering, Oxford Univ. Press, 2011.</span>
+        <span class="note">Pedagogical survey &mdash; good entry point into the area.</span>
+      </li>
+      <li>
+        McDonald, C., and Y&uuml;ksel, S.
+        <span class="title">Exponential filter stability via Dobrushin's coefficient.</span>
+        <span class="venue">Electronic Communications in Probability, 25, 2020.</span>
+        <span class="note">A short, sharp account of the Dobrushin contraction technique.</span>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ============ POMDPs ============ -->
+  <section>
+    <h2>POMDPs &amp; Reinforcement Learning</h2>
+    <ol class="pubs">
+      <li>
+        Kara, A. D., and Y&uuml;ksel, S.
+        <span class="title">Near optimality of finite memory feedback policies in partially observed Markov decision processes.</span>
+        <span class="venue">Journal of Machine Learning Research, 23, 2022.</span>
+        <span class="note">Finite-window approximations with explicit error bounds.</span>
+      </li>
+      <li>
+        Saldi, N., Linder, T., and Y&uuml;ksel, S.
+        <span class="title">Finite Approximations in Discrete-Time Stochastic Control.</span>
+        <span class="venue">Birkh&auml;user, 2018.</span>
+        <span class="note">Quantization-based approximations with convergence guarantees.</span>
+      </li>
+      <li>
+        Singh, S., Jaakkola, T., and Jordan, M.
+        <span class="title">Learning without state-estimation in partially observable Markovian decision processes.</span>
+        <span class="venue">ICML, 1994.</span>
+        <span class="note">Classic motivation for finite-memory policies in RL.</span>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ============ Probability / Graphs ============ -->
+  <section>
+    <h2>Probability &amp; Graph Theory</h2>
+    <ol class="pubs">
+      <li>
+        Aldous, D., and Fill, J.
+        <span class="title">Reversible Markov Chains and Random Walks on Graphs.</span>
+        <span class="venue">Unfinished monograph, 2002.</span>
+        <span class="note">The standard reference for mixing, cover, and hitting times.</span>
+      </li>
+      <li>
+        Levin, D., Peres, Y., and Wilmer, E.
+        <span class="title">Markov Chains and Mixing Times.</span>
+        <span class="venue">AMS, 2nd ed., 2017.</span>
+        <span class="note">A friendly modern textbook on mixing-time techniques.</span>
+      </li>
+    </ol>
+  </section>
+
+</main>
+
+<footer>
+  <span>&copy; <span id="yr"></span> Yunus Emre Demirci</span>
+  <span><a href="index.html">&larr; Back to home</a></span>
+</footer>
+
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
